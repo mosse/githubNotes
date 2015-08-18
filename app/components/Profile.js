@@ -23,7 +23,7 @@ var Profile = React.createClass({
     var childRef = this.ref.child(this.getParams().username);
     this.bindAsArray(childRef, 'notes');
 
-    helpers.getGitHubInfo(this.getParams().username)
+    helpers.getGithubInfo(this.getParams().username)
       .then(function(dataObj){
         this.setState({
           bio: dataObj.bio,
